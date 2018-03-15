@@ -55,7 +55,7 @@ For the set-up you need:
   
 3.	Universal Controller 6.4.2.x 
 4.	Universal Agent 6.3.0.3 or higher installed on a Windows Server
-5.	5.	SAP BusineesObjects Business Intelligence platform 4.2
+5.	SAP BusineesObjects Business Intelligence platform 4.2
 
 # 3.2	Installation Steps
 The following describes the installation steps:
