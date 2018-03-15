@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2018-03-07 17:09:49" unload_format="1" unload_table="ops_unv_tmplt" unload_version="6.4.3.0"><ops_unv_tmplt action="INSERT_OR_UPDATE"><credentials_var/><broadcast_cluster/><agent/><use_common_script>false</use_common_script><credentials/><icon_filesize>1349</icon_filesize><icon>iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAAGvZ15GAAAACXBIWXMAAAsSAAALEgHS3X78AAAE90lEQVRYw+1YbUxTVxh+b1u+yqXQoqN8OD5mwS0CARnbGHOZM9GwkegWYQSTJZv+0Jhtf/ZHF00IOudw2VQGP8jC4gjRRQkGhw5QUSAOIjilOhAoUGhtoS0tpb29vb3vftymX1Rh0Lkl9k3Te+75eN7nPOc957y5BCKCt/FgkQkA4MV2vVcdetj+DhUiCgAg5eB1rnn82DsAQCyGJ5bnsXrc+s2I1fU+uVUiYI3Wya0Sr178ufmUg38CwN2v3ooRCpbtcbHxYBnGA4CTQ+ZJMwMA8jk7V9uuopqnrFEXVW5lam+rOGV6xow1XdOIKDvR56lY4DgFdnaB6eQvXjzMuYqcEkflJvLCNCJy/54FRARE3N06hYif/j4trRvqf2zFReYVi6e7ptCfEYjoik5XjHYNGwrTxf+VmMtyFzBvzxRIwD3655jbBvvKIPanRriBburoBiXVWSgWCohrM3RJn/GFMF7b6+ImNXVkeOHe27EAoGfYiyrbKYXFBaErWut7YlUNziEii1h6XUM2KMgGBSLWPDAi4prGcWcENigQ0UQ5uIKfSAKAmjszjYN65TydERN2ZXe63ymUNY31qy1D+zc+TSPCalNPzOYlkNb5BVlFt9+ujw6/+XzGUcCAgho910DOvfajwrqy8eVJ4dEhhBvo+OhKgGoySQ7FDbRAO87mRhdJQ2co9tDDhQtq6s5mSQhBZHXq8mJCfsoWIeCEjd07YNLYWG7Iqcyo9+JCfTX6dZOoSBp6/OH8xDxjsthpyp5C8hMjedvFfD7DJEbyOtTUG+KQB+/G0pSdpux1WWT5unA/YkfxAADyowU7rj++PGE6IosEAASof00MNAMAB3pnyjq1AAAUXZ0t2pkU4TtP7qCU1g0pjTRXbp8wI6LGbD/co0HEDy5Peh6pzaOmJ17aAJB65j6HqziQ6eNpQG3JiReWNY2xLH74sqTkFbF/5Tm8S/JZHw/f3VB6ZgyyE32NA1p8sjkZySq6wwW87ETyjwmTX3/HitfvyolbOiDtFG0H6Bqi/KPsyNiVE2e2MsJwPo8gggdbEOhfW/7/3cyChIKEgoSefn0404pxa9WI5Vm6P50ZVeSRgvgSsiOYWed1FUZAWgTfxuIYxQacB8knKjcIyxLDllCIYdjMcGguEEcKfG/RwTmm8KYOAPYkR1Rli7hKlcWRe01HsVi4JrSlwE9OoTA7tnXrtTavKf2QLfo4OWJZS8YyjrO5Io7Nvl79z+MLXH1cKE9DswCQJw51sQGABCG/coPws34DY3NPQHheCQD70siTeeJUkt9RIM5oVXNNZzZJPnkpcgn1vBKhe/ove3wzH62F+bpfl/TLqKR+RGthuMotzcqbUwtc+YtubfEV9+ea969Ol7Sr7uts3GufxiqpH6kfMuLyzItQdf9Mcq2c++39bfLcAwPLult7p50MzskNybXy8kvjrqbP2/18AWIc7KEbqga5Hv+JeV2utX2aloeG5t0ZV0eMbY+MRtpRujF2myx6ySBFBFfutv77u1yhcsu6j7JiV7XtCTuTFskbnDYXpccUpcdwlUYr03J/tjxfyr3uafzrlmLONaR1b3ba2gjPTJJvoSq2p5bmxgUg/ai5pfy2TbGa/Xy0WFb2avw8xXQOG0Thgs3p4lUpFE+G5CeSK6OyM0damp/gPD5YlEaHmSlHMEELEgoSChJa2v4GGKXuJW4/bygAAAAASUVORK5CYII=</icon><icon_date_created>2017-10-20 09:37:57</icon_date_created><description>UT Calls the scheduleForms/now REST webservice of SAPBO Enterprise 4.2</description><sys_updated_on>2018-03-07 17:00:27</sys_updated_on><agent_var/><icon_filename>Favicon_SAP-01.png</icon_filename><sys_id>62d65e2e3df546c9a5161a22bbdfbfac</sys_id><output_return_text/><sys_updated_by>ops.admin</sys_updated_by><variable_prefix>var</variable_prefix><sys_created_on>2017-10-20 09:37:01</sys_created_on><script_windows>#!/usr/bin/python
+#
+#  Name: schedulenow_sapbo
+#
+#  Purpose: call the scheduleForms/now REST webservice 
+#           of SAPBO Enterprise 4.2 
+#
+#  Disclaimer
+#  No support and no warranty are provided for this Universal Task. 
+#  The use of this document and the related Universal Task is on your own risk.
+#  Before using this task in a production system, please perform extensive testing.
+#  Stonebranch GmbH assumes no liability for damage caused by 
+#  the performance of the Universal Tasks
+#
+#     Prerequisites:
+#     - Universal Agent for Windows/Linux
+#     - Python 3.6.3 or 2.7
+#     - Requires the Python modules
+#     - requests, argparse, sys, datetime
+#     - Note: request module needs to be added
+#     - e.g. use: pip install request    
+  
+#
+#     Version History: 
+#     1.0  Nils Buer 2017-10-18   Initial Version
+#     1.1  Nils Buer 2017-10-20   test with BO 4.2
+#     1.2  Nils Buer 2017-12-13
+#     1.3  Nils Buer 2017-12-18   
+#     1.4  Nils Buer 2018-03-07   log-level added
+####################################################
+version = "1.4"
+# --
+
+# -- Import required python modules 
+import argparse
+import sys
+import datetime
+import requests
+import logging
+
+# -- logging settings DEBUG, INFO, WARNING, ERROR, CRITICAL
+
+logging.basicConfig(level=logging.${ops_var_loglevel}, format=' %(asctime)s - %(levelname)s - %(message)s')
+
+
+# -- Main Logic Function
+
+def main():
+    SetVariables()                                        # -- Set Variables from Universal Task Form or Command Line Input
+    GetLogontoken()                                       # -- retrieves the session token 
+    RunReport()                                           # -- Run the SAP BO Report based on the provide Ressouce ID sapbo_id
+
+# -- Set Variables from Universal Task Form or Command Line Input
+def SetVariables():
+    parser=argparse.ArgumentParser(description='Purpose : Run an SAP Business Object Report')
+    # ## --&gt; Capture Universal Task Form Variables Here
+    parser.add_argument("--sapbo_port", default="${ops_var_sapbo_port}")
+    parser.add_argument("--sapbo_host", default="${ops_var_sapbo_host}")
+    parser.add_argument("--username", default="${_credentialUser('${ops_var_sapbocred}')}")
+    parser.add_argument("--password", default="${_credentialPwd('${ops_var_sapbocred}')}")    
+    parser.add_argument("--sapbo_id", default="${ops_var_sapbo_id}")
+
+    # ## --
+    global args
+    args=parser.parse_args()
+    logging.info("#UT_INFO# Executing version " + version + " with the following paramaters")
+
+# --
+# ## --&gt; Functions Go Here
+
+def GetLogontoken():
+
+  global logonToken
+
+  # example: url_logon = 'http://walldorf:6405/biprws/logon/long'
+  url_logon = "http://" + args.sapbo_host +  ":" + args.sapbo_port + "/biprws/logon/long"
+  
+  # url_scheduleForms = 'http://192.168.88.14:6405/biprws/infostore/5718/scheduleForms/now'
+  
+
+  logonInfo = {
+    'userName'    : ''+args.username+'',
+    'password'    : ''+args.password+'' ,
+    'auth'        : 'secEnterprise'
+  }
+
+  headers = {
+    'Content-Type'    : 'application/json',
+    'Accept'          : 'application/json'
+  }
+
+  logging.info("#UT_INFO# Requesting Logon Token from SAP Business Objects")
+
+  try:
+    response = requests.post(url_logon, json=logonInfo,headers=headers)
+    response.raise_for_status()
+  except requests.exceptions.RequestException as e:
+    logging.error('#UT_ERROR# Failure : %s' %(e))
+    quit(1)
+  else:
+    logging.info("#UT_INFO# Request Logon Token Succeeded with code : " + str(response.status_code))
+
+  logonToken=response.json()['logonToken']
+
+# -- 
+
+
+def RunReport():
+
+  # example: url_scheduleForms = 'http://192.168.88.14:6405/biprws/infostore/5718/scheduleForms/now'
+  url_scheduleForms = "http://" + args.sapbo_host +  ":" + args.sapbo_port + "/biprws//infostore/" + args.sapbo_id + "/scheduleForms/now"
+
+  headers = {
+    'X-SAP-LogonToken'  : '"'+logonToken+'"' ,
+    'Accept'            : 'application/xml',
+    'Content-Type'      : 'application/xml'
+  }
+
+  logging.info("#UT_INFO# --  Running SAP Business Object Report with ressource ID: " + args.sapbo_id)
+  logging.info("#UT_INFO# --  Using SAP Business Object Host: " + args.sapbo_host)
+  logging.info("#UT_INFO# --  Using SAP Business Object Port: " + args.sapbo_port)
+# get request template for scheduleForms cmd
+  try:
+    response_xml_template = requests.get(url_scheduleForms,headers=headers)
+    response_xml_template.raise_for_status()
+  except requests.exceptions.RequestException as e:
+    logging.error('#UT_ERROR# Failure : %s' %(e))
+    quit(1)
+  else:
+    logging.info("#UT_INFO# Request template for ScheduleForms Succeeded with code : " + str(response_xml_template.status_code))
+
+# post scheduleForms cmd using template from cmd before
+
+  try:
+    response_xml = requests.post(url_scheduleForms, data=response_xml_template,headers=headers)
+    response_xml.raise_for_status()
+  except requests.exceptions.RequestException as e:
+    logging.error('#UT_ERROR# Failure : %s' %(e))
+    quit(1)
+  else:
+    logging.info("#UT_INFO# Schedule Forms Succeeded with code : " + str(response_xml.status_code))
+
+# -- Execute
+main()</script_windows><credentials_var_check>false</credentials_var_check><agent_cluster_var/><agent_cluster_var_check>false</agent_cluster_var_check><agent_var_check>false</agent_var_check><sys_created_by>ops.admin</sys_created_by><output_return_nline>500</output_return_nline><output_return_sline>1</output_return_sline><exit_code_text/><runtime_dir/><output_type>1</output_type><desktop_interact>false</desktop_interact><output_return_type>6</output_return_type><script_unix/><output_return_file/><run_as_sudo>false</run_as_sudo><script/><agent_type>3</agent_type><script_type_windows>py</script_type_windows><environment/><agent_cluster/><elevate_user>false</elevate_user><exit_code_output/><name>UT_WIN_SAPBO_ScheduleForms_now</name><exit_codes>0</exit_codes><exit_code_processing>1</exit_code_processing><create_console>false</create_console><related_items_node><ops_unv_tmplt_field action="INSERT_OR_UPDATE"><choice_sort_option>1</choice_sort_option><form_start_row>false</form_start_row><sys_updated_on>2018-03-07 16:58:39</sys_updated_on><boolean_value_type>1</boolean_value_type><required>false</required><field_mask/><boolean_no_value/><require_if_field/><sys_id>4b4059f3bbb84cdbb1fbbed9ab287206</sys_id><require_if_field_value/><sys_updated_by>ops.admin</sys_updated_by><sys_created_on>2018-03-07 16:52:13</sys_created_on><field_value>INFO</field_value><sys_created_by>ops.admin</sys_created_by><int_field_min/><universal_template_id>62d65e2e3df546c9a5161a22bbdfbfac</universal_template_id><show_if_field/><boolean_yes_value/><form_col_span>1</form_col_span><field_length/><form_end_row>false</form_end_row><label>loglevel</label><int_field_max/><sequence>4</sequence><show_if_field_value/><form_row_span>1</form_row_span><default_list_view>false</default_list_view><hint>log level: DEBUG, INFO, WARNING, ERROR, CRITICAL</hint><field_mapping>choiceField1</field_mapping><name>loglevel</name><field_regex/><field_type>4</field_type></ops_unv_tmplt_field><ops_unv_tmplt_field action="INSERT_OR_UPDATE"><choice_sort_option>1</choice_sort_option><form_start_row>false</form_start_row><sys_updated_on>2017-10-20 09:59:31</sys_updated_on><boolean_value_type>1</boolean_value_type><required>true</required><field_mask/><boolean_no_value/><require_if_field/><sys_id>866d6de71d794e91bc986d6dc320a2f5</sys_id><require_if_field_value/><sys_updated_by>ops.admin</sys_updated_by><sys_created_on>2017-10-20 09:49:16</sys_created_on><field_value/><sys_created_by>ops.admin</sys_created_by><int_field_min/><universal_template_id>62d65e2e3df546c9a5161a22bbdfbfac</universal_template_id><show_if_field/><boolean_yes_value/><form_col_span>1</form_col_span><field_length/><form_end_row>false</form_end_row><label>SAP BO CRED</label><int_field_max/><sequence>3</sequence><show_if_field_value/><form_row_span>1</form_row_span><default_list_view>false</default_list_view><hint>Credentials to connect to SAP Business Objects</hint><field_mapping>credentialField1</field_mapping><name>sapbocred</name><field_regex/><field_type>5</field_type></ops_unv_tmplt_field><ops_unv_tmplt_field action="INSERT_OR_UPDATE"><choice_sort_option>1</choice_sort_option><form_start_row>false</form_start_row><sys_updated_on>2017-10-20 09:46:41</sys_updated_on><boolean_value_type>1</boolean_value_type><required>true</required><field_mask/><boolean_no_value/><require_if_field/><sys_id>9f2c7418f26a4f1d8e77b203554cb66f</sys_id><require_if_field_value/><sys_updated_by>ops.admin</sys_updated_by><sys_created_on>2017-10-20 09:46:41</sys_created_on><field_value/><sys_created_by>ops.admin</sys_created_by><int_field_min/><universal_template_id>62d65e2e3df546c9a5161a22bbdfbfac</universal_template_id><show_if_field/><boolean_yes_value/><form_col_span>1</form_col_span><field_length/><form_end_row>false</form_end_row><label>SAP BO ID</label><int_field_max/><sequence>2</sequence><show_if_field_value/><form_row_span>1</form_row_span><default_list_view>false</default_list_view><hint>Business Object ID: Resource ID for scheduling e.g. ID of the Crystal Report - This ID can be looked up in the SAPBO Central Management Console</hint><field_mapping>textField3</field_mapping><name>sapbo_id</name><field_regex/><field_type>1</field_type></ops_unv_tmplt_field><ops_unv_tmplt_field action="INSERT_OR_UPDATE"><choice_sort_option>1</choice_sort_option><form_start_row>false</form_start_row><sys_updated_on>2017-10-20 09:43:29</sys_updated_on><boolean_value_type>1</boolean_value_type><required>true</required><field_mask/><boolean_no_value/><require_if_field/><sys_id>e0c2a61b091d4753b90397f1753490ea</sys_id><require_if_field_value/><sys_updated_by>ops.admin</sys_updated_by><sys_created_on>2017-10-20 09:42:37</sys_created_on><field_value>6405</field_value><sys_created_by>ops.admin</sys_created_by><int_field_min/><universal_template_id>62d65e2e3df546c9a5161a22bbdfbfac</universal_template_id><show_if_field/><boolean_yes_value/><form_col_span>1</form_col_span><field_length/><form_end_row>false</form_end_row><label>SAP BO PORT</label><int_field_max/><sequence>1</sequence><show_if_field_value/><form_row_span>1</form_row_span><default_list_view>false</default_list_view><hint/><field_mapping>textField2</field_mapping><name>sapbo_port</name><field_regex/><field_type>1</field_type></ops_unv_tmplt_field><ops_unv_tmplt_field action="INSERT_OR_UPDATE"><choice_sort_option>1</choice_sort_option><form_start_row>false</form_start_row><sys_updated_on>2017-10-20 09:41:15</sys_updated_on><boolean_value_type>1</boolean_value_type><required>true</required><field_mask/><boolean_no_value/><require_if_field/><sys_id>fabfe2b024864597abaef1809c24541b</sys_id><require_if_field_value/><sys_updated_by>ops.admin</sys_updated_by><sys_created_on>2017-10-20 09:40:20</sys_created_on><field_value/><sys_created_by>ops.admin</sys_created_by><int_field_min/><universal_template_id>62d65e2e3df546c9a5161a22bbdfbfac</universal_template_id><show_if_field/><boolean_yes_value/><form_col_span>1</form_col_span><field_length/><form_end_row>false</form_end_row><label>SAP BO HOST</label><int_field_max/><sequence>0</sequence><show_if_field_value/><form_row_span>1</form_row_span><default_list_view>false</default_list_view><hint/><field_mapping>textField1</field_mapping><name>sapbo_host</name><field_regex/><field_type>1</field_type></ops_unv_tmplt_field><ops_unv_tmplt_field_choice action="INSERT_OR_UPDATE"><field_id>4b4059f3bbb84cdbb1fbbed9ab287206</field_id><use_field_value_for_label>true</use_field_value_for_label><sys_id>5af239f3cb63478dad931ff16edf4507</sys_id><sequence>3</sequence><sys_updated_by>ops.admin</sys_updated_by><sys_created_on>2018-03-07 16:59:27</sys_created_on><field_value_label>ERROR</field_value_label><field_value>ERROR</field_value><sys_updated_on>2018-03-07 16:59:27</sys_updated_on><sys_created_by>ops.admin</sys_created_by><universal_template_id>62d65e2e3df546c9a5161a22bbdfbfac</universal_template_id></ops_unv_tmplt_field_choice><ops_unv_tmplt_field_choice action="INSERT_OR_UPDATE"><field_id>4b4059f3bbb84cdbb1fbbed9ab287206</field_id><use_field_value_for_label>true</use_field_value_for_label><sys_id>8b22f6420e9a486b96a1eccaf989536a</sys_id><sequence>0</sequence><sys_updated_by>ops.admin</sys_updated_by><sys_created_on>2018-03-07 16:58:56</sys_created_on><field_value_label>INFO</field_value_label><field_value>INFO</field_value><sys_updated_on>2018-03-07 16:58:56</sys_updated_on><sys_created_by>ops.admin</sys_created_by><universal_template_id>62d65e2e3df546c9a5161a22bbdfbfac</universal_template_id></ops_unv_tmplt_field_choice><ops_unv_tmplt_field_choice action="INSERT_OR_UPDATE"><field_id>4b4059f3bbb84cdbb1fbbed9ab287206</field_id><use_field_value_for_label>true</use_field_value_for_label><sys_id>d0f99f3225364857b9601aae61f13ec4</sys_id><sequence>4</sequence><sys_updated_by>ops.admin</sys_updated_by><sys_created_on>2018-03-07 16:59:36</sys_created_on><field_value_label>CRITICAL</field_value_label><field_value>CRITICAL</field_value><sys_updated_on>2018-03-07 16:59:36</sys_updated_on><sys_created_by>ops.admin</sys_created_by><universal_template_id>62d65e2e3df546c9a5161a22bbdfbfac</universal_template_id></ops_unv_tmplt_field_choice><ops_unv_tmplt_field_choice action="INSERT_OR_UPDATE"><field_id>4b4059f3bbb84cdbb1fbbed9ab287206</field_id><use_field_value_for_label>true</use_field_value_for_label><sys_id>da53187a27a5434db5355dd8bc3568a7</sys_id><sequence>2</sequence><sys_updated_by>ops.admin</sys_updated_by><sys_created_on>2018-03-07 16:59:19</sys_created_on><field_value_label>WARNING</field_value_label><field_value>WARNING</field_value><sys_updated_on>2018-03-07 16:59:19</sys_updated_on><sys_created_by>ops.admin</sys_created_by><universal_template_id>62d65e2e3df546c9a5161a22bbdfbfac</universal_template_id></ops_unv_tmplt_field_choice><ops_unv_tmplt_field_choice action="INSERT_OR_UPDATE"><field_id>4b4059f3bbb84cdbb1fbbed9ab287206</field_id><use_field_value_for_label>true</use_field_value_for_label><sys_id>e1790782701944b982b54e3488947152</sys_id><sequence>1</sequence><sys_updated_by>ops.admin</sys_updated_by><sys_created_on>2018-03-07 16:59:09</sys_created_on><field_value_label>DEBUG</field_value_label><field_value>DEBUG</field_value><sys_updated_on>2018-03-07 16:59:09</sys_updated_on><sys_created_by>ops.admin</sys_created_by><universal_template_id>62d65e2e3df546c9a5161a22bbdfbfac</universal_template_id></ops_unv_tmplt_field_choice></related_items_node></ops_unv_tmplt></unload>
