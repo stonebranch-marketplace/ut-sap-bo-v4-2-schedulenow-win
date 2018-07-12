@@ -3,7 +3,7 @@
 
 This Universal Task allows to schedule any SAP Business Object schedulable resource including Crystal reports or WebI reports by calling the SAP Business Objects “Schedule now” REST Webservice API Command.
 
-# 1.	Disclaimer
+# 1	Disclaimer
 
 No support and no warranty are provided by Stonebranch GmbH for this document and the related Universal Task. The use of this document and the related Universal Task is on your own risk.
 
@@ -11,7 +11,7 @@ Before using this task in a production system, please perform extensive testing.
 
 Stonebranch GmbH assumes no liability for damage caused by the performance of the Universal Tasks
 
-# 2.	Introduction
+# 2	Introduction
 
 Business Objects 4.x comes with a RESTful web service SDK. The Business Intelligence platform RESTful web service SDK lets you access the BI platform using the HTTP protocol and allows to schedule any Schedulable resources include documents, for example Crystal reports and WebI reports.
 
@@ -92,7 +92,7 @@ Go to “All Tasks” and load via the Import functionality the Universal Task c
    
    ![](images/image2.png)
 
-# 4.	Universal Task Configuration
+# 4	Universal Task Configuration
 
 **1.	Activate: Resolvable Credentials in Universal Automation Center:**
 
@@ -122,7 +122,7 @@ Image 5
 This ID can be looked up in the SAPBO Central Management Console (see screenshots below)
 
 
-# 5.	SAP Business Objects
+# 5	SAP Business Objects
 
 The following provides to non-SAP BO Consultants an Introduction how to find the Business Object ID and how to verify that a report has been executed successfully in SAP BO.
 
@@ -170,7 +170,7 @@ Image 11
 
 ![](images/image11.png)
 
-# 6.	Test Cases
+# 6	Test Cases
 
 The following basic test cases has been performed:
 
@@ -178,7 +178,7 @@ Image 12
 
 ![](images/image12.png)
 
-# 7.	Document References
+# 7	Document References
 
 1.This document references the following documents:
 
