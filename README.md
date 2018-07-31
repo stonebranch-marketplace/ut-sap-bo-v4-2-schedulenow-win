@@ -1,4 +1,4 @@
-# ut-sap-bo-v4-2-schedulenow-win
+# ut-sap-bo-v4-2-schedulenow-windows
 # Abstract: 
 
 This Universal Task allows to schedule any SAP Business Object schedulable resource including Crystal reports or WebI reports by calling the SAP Business Objects “Schedule now” REST Webservice API Command.
